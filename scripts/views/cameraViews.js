@@ -106,8 +106,6 @@ export function cameraInit() {
     galleryBackBtn();
   });
 
-  console.log(lastPicClicked);
-
   lastPic.innerHTML = `<img src=${picArr.at(-1)} alt="">`;
 
   lastPic.addEventListener("click", function () {
@@ -115,8 +113,6 @@ export function cameraInit() {
     gallery.classList.remove("hidden");
     lastPicClicked = true;
   });
-
-  console.log(lastPicClicked);
 
   // Initialize webcam
   initWebcam();

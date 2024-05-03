@@ -11,9 +11,17 @@ export function facetimeInit() {
     allAppScreen.classList.add("hidden");
     allApps.classList.add("hidden");
 
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var stringLength = 30;
+
+    function pickRandom() {
+    return possible[Math.floor(Math.random() * possible.length)];
+    }
+
+var randomString = Array.apply(null, Array(stringLength)).map(pickRandom).join('');
     const domain = "meet.jit.si";
     const options = {
-      roomName: "YourRoomName",
+      roomName: randomString,
       width: "100%",
       height: "100%",
       parentNode: document.querySelector("#meet"),
@@ -24,12 +32,12 @@ export function facetimeInit() {
 
     api = new JitsiMeetExternalAPI(domain, options);
 
-    api.addEventListener("participantJoined", (e) => {
-      console.log("Participant joined the meeting", e.displayName, '❤️');
+    api.addEventListener("participantJoined", () => {
+      console.log("Participant joined the meeting");
     });
 
-    api.addEventListener("participantLeft", (e) => {
-      console.log("Participant left the meeting", e.displayName, '❤️');
+    api.addEventListener("participantLeft", () => {
+      console.log("Participant left the meeting");
     });
   });
 
