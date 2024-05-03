@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Duru+Sans&family=Hind:wght@300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Duru Sans", sans-serif;
+  box-sizing: inherit;
+}
+
+.container {
+    perspective: 150rem;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.mobile {
+    position: relative;
+    width: 100%;
+    max-width: 32rem;
+    height: 85vh;
+    margin: 0 auto;
+    border: 5px solid black;
+    border-radius: 2rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+.default-homescreen {
+    background-image: url(img/closed.avif);
+}
+
+.topNotch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    left: 51%;
+    transform: translateX(-51%);
+    height: 2.5rem;
+    width: 14rem;
+    border-radius: 0 0 10px 10px;
+    background-color: black;
+    z-index: 1000;
+}
+
+.topNotch-speaker {
+    background-color: rgba(89, 89, 89, .4);
+    height: 8px;
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.topNotch-cam {
+    background-color: rgb(89, 89, 89, .4);;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+
+.topNotch-time {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    background-color: rgb(40, 238, 40);
+    z-index: 1000;
+
+}
+
+.toggleBtn-oneOff {
+    position: absolute;
+    right: -10px;
+    top: 30%;
+    width: 1rem;
+    height: 5rem;
+    border-radius: 0 6px  6px 0;
+    background-color: black;
+}
+
+.toggleBtn-volumeHigher {
+    position: absolute;
+    left: -10px;
+    top: 30%;
+    width: 1rem;
+    height: 4rem;
+    border-radius: 6px 0 0 6px;
+    background-color: black;
+}
+
+.toggleBtn-volumeLower {
+    position: absolute;
+    left: -10px;
+    top: 22%;
+    width: 1rem;
+    height: 4rem;
+    border-radius: 6px 0 0 6px;
+    background-color: black;
+}
+
+.clock {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%);
+    color: white;
+}
+
+.clock-time {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.clock-day { 
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.basicApps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+} 
+
+.basicApps img{ 
+    width: 6rem;
+    height: 6rem;
+}
+
+.OtherAppsBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+    bottom: 11rem;
+}
+
+.allApps {
+    position: absolute;
+    top: 20%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.3rem;
+    padding: 0 1.5rem;
+}
+
+.allApps img{ 
+width: 100%;
+height: 100%;
+}
+.camera {
+  background-color: black;
+  height: 100%;
+  border-radius: 1.5rem;
+}
+.camera-comp {
+   height: 80%;
+}
+#video2 {
+    border-radius: 1.5rem 1.5rem 0 0 ; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.captureBtnBox {
+display: flex;
+justify-content: center;
+margin-top: 2rem;
+}
+
+#captureBtn2 {
+  border: none;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  outline: 6px solid white;
+  outline-offset: 4px;
+}
+
+#captureBtn2:active{ 
+  transform: scale(.9);
+}
+
+.lastPic {
+  position: absolute;
+  bottom: 3rem;
+  left: 15px;
+  width: 6rem;
+  height: 6rem;
+  background-color: #f04141;
+}
+
+.lastPic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#canvas2{
+  width: 100%;
+  height: 100%;
+}
+
+.flash-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  opacity: .8;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.flash {
+  animation: flashEffect .3s;
+}
+
+@keyframes flashEffect {
+  0% { background-color: rgb(255, 255, 255); }
+  100% { background-color: transparent; }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .2rem;
+    border-radius: 1.5rem;
+    background-color: white;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.gallery img{ 
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+} 
+
+.gallery-back, .gallery-view-back, .ageCal-back, .camera-back{ 
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    background-color: rgb(40, 238, 40);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.gallery-view {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.2rem;
+    background-color: black;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.gallery-view img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-view-setting {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    transform: scale(1.1);
+}
+
+.gallery-view-setting-opts {
+    position: absolute;
+    bottom: 45px;
+    right: -250px;
+    width: 25rem;
+    transition: all .5s;
+}
+
+.gallery-view-setting-opts-show { 
+    right: 10px;
+}
+
+.gallery-view-setting-opts li{
+    list-style: none;
+    font-size: 1.5rem;
+    background-color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.gallery-view-setting-opts li:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+.gallery-view-setting-opts li:nth-child(1):active{ 
+    transform: scale(1.1);
+}
+
+.gotoHomeBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1.6);
+    bottom: 2rem;
+}
+
+
+.isOff {
+    display: none;
+}
+.ageCal {
+    background-color: #e5e5e5;
+    height: 100%;
+    border-radius: 1.5rem;
+}
+.containerAgeCal {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 1rem 1rem 11.5rem 1rem;
+    padding: 3rem;
+  }
+  .svg {
+    background-color: #8030f0;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 1rem;
+    position: absolute;
+    right: 2rem;
+    top: 10rem;
+  }
+ .svg svg {
+    height: 3rem;
+    width: 3.5rem;
+  }
+  .reset--btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(2, 106, 2);
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    bottom: 30px;
+    height: 6rem;
+    width: 6rem;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(136, 249, 136);
+    text-align: center;
+  }
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  .labelBox {
+    color: #929191;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+  .labelBoxH {
+    color: #ec0404;
+  }
+  .inputBox {
+    width: 7rem;
+      height: 1.5rem;
+      padding: 1.2rem;
+    margin-right: 2rem;
+    border: 1px solid #dfdfdf;
+    font-size: 16px;
+    font-weight: 700;
+
+  }
+
+  .inputBox::placeholder {
+    color: #a9a9a9;
+  }
+
+  .inputBoxH {
+    border: 1px solid #f31212;
+  }
+  .inputBox:focus {
+    border: 1px solid #8030f0;
+    outline: none;
+  }
+  .inputBox:focus:invalid {
+    border: 1px solid #f04141;
+  }
+  .empty__text {
+    color: red;
+    margin-top: 0.5rem;
+  }
+  .hidden {
+    display: none;
+  }
+  .textCon {
+    font-size: 4rem;
+    margin-top: 6rem;
+    font-family: "Ysabeau Office", sans-serif;
+    font-weight: bold;
+  }
+  .text {
+    margin: 0;
+  }
+  .num {
+    color: #8030f0;
+  }
+
+.hidden {
+    display: none;
+}
+

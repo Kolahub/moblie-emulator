@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mobile default-homescreen">
+        <div class="topNotch">
+          <div class="topNotch-speaker"></div>
+          <div class="topNotch-cam"></div>
+        </div>
+
+        <div class="mobileComp topNotch-time isOff">00:00</div>
+
+        <div class="toggleBtn">
+          <div class="toggleBtn-oneOff"></div>
+
+          <div class="toggleBtn-volumeHigher"></div>
+          <div class="toggleBtn-volumeLower"></div>
+        </div>
+
+        <div class="homeScreen">
+          <div class="mobileComp clock isOff">
+            <div class="clock-time">00 : 00</div>
+            <div class="clock-day">-- -- --</div>
+          </div>
+
+          <div class="mobileComp basicApps isOff">
+            <div class="call">
+              <img src="img/maincall.webp" alt="" />
+            </div>
+
+            <div class="msg">
+              <img src="img/Apple_Messages-512.webp" alt="" />
+            </div>
+
+            <div class="msg">
+              <img src="img/Chrome-icon.png" alt="" />
+            </div>
+
+            <div class="msg homeCamera cameraBtn">
+              <img src="img/camera.png" alt="" />
+            </div>
+          </div>
+
+          <div class="mobileComp OtherAppsBtn isOff">
+            <img src="img/grid-3x3-gap-fill.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="allAppScreen hidden">
+          <div class="allApps">
+            <div class="app">
+              <img src="img/Apple_Mail-512.webp" alt="" />
+            </div>
+            <div class="app">
+              <img src="img/Apple_Messages-512.webp" alt="" />
+            </div>
+            <div class="app cameraBtn">
+              <img src="img/camera.png" alt="" />
+            </div>
+            <div class="app">
+              <img src="img/Chrome-icon.png" alt="" />
+            </div>
+            <div class="app galleryBtn">
+              <img src="img/gallery-app-icon.png" alt="" />
+            </div>
+            <div class="app"><img src="img/maincall.webp" alt="" /></div>
+            <div class="app">
+              <img src="img/App_Store_(iOS).svg.png" alt="" />
+            </div>
+            <div class="app">
+              <img src="img/setting-app-icon.webp" alt="" />
+            </div>
+            <div class="app">
+              <img src="img/YouTube_iOS_2019.webp" alt="" />
+            </div>
+
+            <div class="app ageCalBtn">
+              <img src="img/ageCal.webp" alt="">
+            </div>
+            <!-- <div class="app"></div>
+            <div class="app"></div> -->
+          </div>
+
+          <div class="gotoHomeBtn">
+            <img src="img/circle.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="camera hidden">
+          <div class="camera-back">Back</div>
+          <div class="flash-overlay"></div>
+          <div class="camera-comp">
+            <video id="video2" autoplay></video>
+            <div class="captureBtnBox">
+              <button id="captureBtn2"></button>
+            </div>
+            <div class="lastPic"></div>
+            <canvas id="canvas2" style="display:none;"></canvas>
+          </div>
+        </div>
+
+        <div class="gallery hidden">
+          <div class="gallery-back">back</div>
+        </div>
+
+        <div class="gallery-view hidden">
+          <!-- <img src="img/gear-fill.svg" alt=""> -->
+          <!-- <div class="gallery-view-back">
+            back
+           </div> -->
+          <!-- <img src="img/pic-2.jpg" alt=""> -->
+
+          <!-- <div class="gallery-view-setting-opts">
+          <li class="gallery-view-setting-opt">qhegdbqw</li>
+          <li class="gallery-view-setting-opt">qwhbdqwj</li>
+        </div> -->
+        </div>
+
+        <div class="ageCal hidden">
+          <div class="ageCal-back">back</div>
+          <div class="containerAgeCal">
+            <div class="svg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="46"
+                height="44"
+                viewBox="0 0 46 44"
+              >
+                <g fill="none" stroke="#FFF" stroke-width="2">
+                  <path
+                    d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                  />
+                </g>
+              </svg>
+            </div>
+            <button class="reset--btn">Reset</button>
+            <form action="#" class="form">
+              <div class="input">
+                <label for="" class="labelBox label__day">Day</label>
+                <input type="number" class="inputBox input__day" placeholder="DD" />
+                <div class="hidden empty__text">This field is required</div>
+              </div>
+      
+              <div class="input">
+                <label for="" class="labelBox label__day">Month</label>
+                <input type="number" class="inputBox input__month" placeholder="MM" />
+                <div class="hidden empty__text">This field is required</div>
+              </div>
+      
+              <div class="input">
+                <label for="" class="labelBox label__day">year</label>
+                <input
+                  type="number"
+                  class="inputBox input__year"
+                  placeholder="YYYY"
+                />
+                <div class="hidden empty__text">This field is required</div>
+              </div>
+            </form>
+      
+            <div class="textCon">
+              <p class="text year"><span class="num year_num">- -</span> years</p>
+              <p class="text month"><span class="num month_num">- -</span> months</p>
+              <p class="text day"><span class="num day_num">- -</span> days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/index.js"></script>
+
+
+
+  </body>
+</html>
