@@ -83,8 +83,11 @@
             <div class="app ageCalBtn">
               <img src="img/ageCal.webp" alt="">
             </div>
-            <!-- <div class="app"></div>
-            <div class="app"></div> -->
+            <div class="app facetimeBtn">
+              <img src="img/facetime.png" alt="">
+            </div>
+
+            <!-- <div class="app"></div> -->
           </div>
 
           <div class="gotoHomeBtn">
@@ -110,16 +113,6 @@
         </div>
 
         <div class="gallery-view hidden">
-          <!-- <img src="img/gear-fill.svg" alt=""> -->
-          <!-- <div class="gallery-view-back">
-            back
-           </div> -->
-          <!-- <img src="img/pic-2.jpg" alt=""> -->
-
-          <!-- <div class="gallery-view-setting-opts">
-          <li class="gallery-view-setting-opt">qhegdbqw</li>
-          <li class="gallery-view-setting-opt">qwhbdqwj</li>
-        </div> -->
         </div>
 
         <div class="ageCal hidden">
@@ -171,12 +164,18 @@
             </div>
           </div>
         </div>
+
+        <div class="facetime hidden">
+          <div class="facetime-back">back</div>
+          <div id="meet"></div>
+        </div>
       </div>
     </div>
 
-    <script type="module" src="scripts/index.js"></script>
 
-
-
+    
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.10.0/dist/tf.min.js"></script> -->
+    <script defer src='https://meet.jit.si/external_api.js'></script>
+    <script type="module" defer src="scripts/index.js"></script>
   </body>
 </html>

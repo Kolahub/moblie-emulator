@@ -1,6 +1,7 @@
 import { cameraInit } from "./views/cameraViews.js";
 import { ageCalInit } from "./views/ageCalViews.js";
 import { gallery, galleryInit } from "./views/galleryViews.js";
+import { facetimeInit } from "./views/facetimeViews.js";
 const toggleBtnOneOff = document.querySelector(".toggleBtn-oneOff");
 export const mobileBox = document.querySelector(".mobile");
 const clockTime = document.querySelector(".clock-time");
@@ -13,9 +14,6 @@ export const homeScreen = document.querySelector(".homeScreen");
 export const gotoHomeBtn = document.querySelector(".gotoHomeBtn");
 export const allAppScreen = document.querySelector(".allAppScreen");
 export const allApps = document.querySelector(".allApps");
-// export const galleryBtn = document.querySelector(".galleryBtn");
-// export const gallery = document.querySelector(".gallery");
-// export const galleryView = document.querySelector(".gallery-view");
 
 // localStorage.clear()
 let isOn = localStorage.getItem("isOn")
@@ -90,3 +88,6 @@ cameraInit();
 
 //Age Calculator App view
 ageCalInit();
+
+//FaceTime App view
+facetimeInit();
