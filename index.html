@@ -87,7 +87,7 @@
               <img src="img/facetime.png" alt="">
             </div>
 
-            <!-- <div class="app"></div> -->
+            <div class="app musicBtn"><img src="img/applemusic.png" alt=""></div>
           </div>
 
           <div class="gotoHomeBtn">
@@ -169,12 +169,25 @@
           <div class="facetime-back">back</div>
           <div id="meet"></div>
         </div>
+
+        <div class="music hidden">
+          <div class="music-back">Back</div>
+          <div class="music-degree hidden">
+            <input type="range" id="volume-control">
+            <span id="volume-percentage">50%</span>
+        </div>
+
+        <div class="music-playing">
+          <h2 class="music-playing-info">No music is played yet.</h2>
+        </div>
+
+        <div class="allMusic">
+        </div>
+
+        </div>
       </div>
     </div>
 
-
-    
-    <!-- <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.10.0/dist/tf.min.js"></script> -->
     <script defer src='https://meet.jit.si/external_api.js'></script>
     <script type="module" defer src="scripts/index.js"></script>
   </body>

@@ -2,6 +2,7 @@ import { cameraInit } from "./views/cameraViews.js";
 import { ageCalInit } from "./views/ageCalViews.js";
 import { gallery, galleryInit } from "./views/galleryViews.js";
 import { facetimeInit } from "./views/facetimeViews.js";
+import { musicInit } from "./views/musicViews.js";
 const toggleBtnOneOff = document.querySelector(".toggleBtn-oneOff");
 export const mobileBox = document.querySelector(".mobile");
 const clockTime = document.querySelector(".clock-time");
@@ -91,3 +92,6 @@ ageCalInit();
 
 //FaceTime App view
 facetimeInit();
+
+//Musci App view
+musicInit()

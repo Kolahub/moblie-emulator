@@ -100,7 +100,7 @@ body {
     background-color: black;
 }
 
-.toggleBtn-volumeHigher {
+.toggleBtn-volumeLower {
     position: absolute;
     left: -10px;
     top: 30%;
@@ -110,7 +110,7 @@ body {
     background-color: black;
 }
 
-.toggleBtn-volumeLower {
+.toggleBtn-volumeHigher {
     position: absolute;
     left: -10px;
     top: 22%;
@@ -265,7 +265,7 @@ margin-top: 2rem;
 } 
 
 .gallery-back, .gallery-view-back, .ageCal-back, .camera-back,
-.facetime-back{ 
+.facetime-back, .music-back{ 
     font-size: 1.3rem;
     font-weight: 600;
     color: rgb(255, 255, 255);
@@ -461,6 +461,91 @@ margin-top: 2rem;
 }
 #meet {
   height: 100%;
+}
+
+.music {
+  border-radius: inherit;
+  height: 100%;
+background-color: #929191;
+}
+
+.music-degree{
+  display: flex;
+  position: absolute;
+  top: 30%;
+  left: -25%;
+  width: 20rem;
+  transform: rotate(-90deg);
+}
+
+.music-degree input {
+  flex: 1;
+  height: 100%;
+}
+
+#volume-percentage {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  transform: rotate(90deg);
+}
+
+.music-playing{
+  position: relative;
+  background-image: url(img/musicAppwap.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 24vh;
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.music-playing h2{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 800;
+  color: transparent;
+  width: 80%;
+  background-image: linear-gradient(to left, rgb(255, 0, 191), rgb(213, 80, 80));
+  -webkit-background-clip: text;
+}
+
+.allMusic {
+  height: 59.4vh;
+  border-radius: 0 0 1rem 1.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(232, 149, 149);
+}
+
+.song-img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 8px;
+}
+
+.song-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.toggle-play {
+  margin-left: auto;
+}
+
+.toggle-play img{ 
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .hidden {
