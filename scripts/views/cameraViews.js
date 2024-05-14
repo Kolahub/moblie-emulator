@@ -1,3 +1,13 @@
+/**
+ * This code snippet defines a JavaScript module that contains functions related to a camera app and a gallery app.
+ * The module exports two functions: `galleryBackBtn` and `cameraInit`.
+ *
+ * `galleryBackBtn` is a function that handles the functionality of the back button in the gallery app. It checks if the user entered the gallery through the camera app or from the all apps page and performs the appropriate action when the back button is clicked.
+ *
+ * `cameraInit` is a function that initializes the camera app. It handles the functionality of the camera buttons, access to the webcam, capturing images, and displaying the captured images in the gallery app.
+ *
+ * The code snippet also imports various elements and functions from other modules, such as the home screen, other app buttons, and gallery views.
+ */
 import {
   homeScreen,
   OtherAppsBtn,
@@ -31,7 +41,7 @@ export function galleryBackBtn() {
       allApps.classList.remove("hidden");
       gallery.classList.add("hidden");
       allAppScreen.classList.remove("hidden");
-      console.log("active", "galleryBackBtn");
+      // console.log("active", "galleryBackBtn");
     }
   });
 }
@@ -95,8 +105,8 @@ export function cameraInit() {
     canvas.height = video.videoHeight;
     canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
     const imgSrc = canvas.toDataURL("image/jpeg");
-    picArr.push(imgSrc);
-    lastPic.innerHTML = `<img src=${picArr.at(-1)} alt="">`;
+    picArr.unshift(imgSrc);
+    lastPic.innerHTML = `<img src=${picArr.at(0)} alt="">`;
     localStorage.setItem("picData", JSON.stringify(picArr));
     galleryFunc();
     gallery.innerHTML = `

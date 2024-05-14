@@ -21,7 +21,6 @@ export function ageCalInit() {
     allApps.classList.add("hidden");
     ageCal.classList.remove("hidden");
     allAppScreen.classList.add("hidden");
-    console.log("wefwe");
   });
   const ResetDisplayedValues = function () {
     yearNum.textContent = "- -";

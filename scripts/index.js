@@ -3,6 +3,10 @@ import { ageCalInit } from "./views/ageCalViews.js";
 import { gallery, galleryInit } from "./views/galleryViews.js";
 import { facetimeInit } from "./views/facetimeViews.js";
 import { musicInit } from "./views/musicViews.js";
+import { callInit } from "./views/callViews.js";
+import { msgInit } from "./views/msgVeiws.js";
+const powerOff = document.querySelector(".powerOff");
+const loader = document.querySelector(".loader");
 const toggleBtnOneOff = document.querySelector(".toggleBtn-oneOff");
 export const mobileBox = document.querySelector(".mobile");
 const clockTime = document.querySelector(".clock-time");
@@ -24,6 +28,13 @@ let isOn = localStorage.getItem("isOn")
 let wallpaperImg = localStorage.getItem("wallpaperImg")
   ? JSON.parse(localStorage.getItem("wallpaperImg"))
   : "img/defaulfwallpaper.jpeg";
+
+// toggleBtnOneOff.addEventListener('keypress', function (e) {
+//   setTimeout(() => {
+//     powerOff.classList.add('hidden')
+//     console.log('powerOff')
+//   }, 6000)
+// })
 
 toggleBtnOneOff.addEventListener("click", function (e) {
   if (isOn) {
@@ -81,6 +92,12 @@ gotoHomeBtn.addEventListener("click", function () {
   gallery.classList.add("hidden");
 });
 
+//call App view
+callInit();
+
+//msg App view
+msgInit();
+
 //Gallery App view
 galleryInit();
 
@@ -94,4 +111,4 @@ ageCalInit();
 facetimeInit();
 
 //Musci App view
-musicInit()
+musicInit();

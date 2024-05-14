@@ -9,6 +9,9 @@
   <body>
     <div class="container">
       <div class="mobile default-homescreen">
+        <!-- <div class="powerOff">
+          <div class="loader"></div> 
+        </div> -->
         <div class="topNotch">
           <div class="topNotch-speaker"></div>
           <div class="topNotch-cam"></div>
@@ -30,19 +33,19 @@
           </div>
 
           <div class="mobileComp basicApps isOff">
-            <div class="call">
+            <div class="calling callBtn">
               <img src="img/maincall.webp" alt="" />
             </div>
 
-            <div class="msg">
+            <div class="msgBtn">
               <img src="img/Apple_Messages-512.webp" alt="" />
             </div>
 
-            <div class="msg">
+            <div class="chrome">
               <img src="img/Chrome-icon.png" alt="" />
             </div>
 
-            <div class="msg homeCamera cameraBtn">
+            <div class=" homeCamera cameraBtn">
               <img src="img/camera.png" alt="" />
             </div>
           </div>
@@ -57,7 +60,7 @@
             <div class="app">
               <img src="img/Apple_Mail-512.webp" alt="" />
             </div>
-            <div class="app">
+            <div class="app msgBtn">
               <img src="img/Apple_Messages-512.webp" alt="" />
             </div>
             <div class="app cameraBtn">
@@ -69,7 +72,7 @@
             <div class="app galleryBtn">
               <img src="img/gallery-app-icon.png" alt="" />
             </div>
-            <div class="app"><img src="img/maincall.webp" alt="" /></div>
+            <div class="app callBtn"><img src="img/maincall.webp" alt="" /></div>
             <div class="app">
               <img src="img/App_Store_(iOS).svg.png" alt="" />
             </div>
@@ -81,18 +84,288 @@
             </div>
 
             <div class="app ageCalBtn">
-              <img src="img/ageCal.webp" alt="">
+              <img src="img/ageCal.webp" alt="" />
             </div>
             <div class="app facetimeBtn">
-              <img src="img/facetime.png" alt="">
+              <img src="img/facetime.png" alt="" />
             </div>
 
-            <div class="app musicBtn"><img src="img/applemusic.png" alt=""></div>
+            <div class="app musicBtn">
+              <img src="img/applemusic.png" alt="" />
+            </div>
           </div>
 
           <div class="gotoHomeBtn">
             <img src="img/circle.svg" alt="" />
           </div>
+        </div>
+
+        <div class="call hidden">
+          <div class="call-back">Back</div>
+          <div class="call-recents">
+            <div class="call-recents-head">
+              <h1>Recents</h1>
+              <h3 class="clear-all-recents">clear All</h3>
+            </div>
+
+            <div class="recent-lists">
+              <!-- <div class="call-recents-pern">
+                <h2>Mr teslim <span>090763636363</span></h2>
+                <div class="call-recents-handler">
+                  <h3>11:14</h3>
+                  <img src="img/x-circle-fill.svg" alt="" />
+                </div>
+              </div>
+              <div class="call-recents-pern">
+                <h2>Mr teslim <span>090763636363</span></h2>
+                <div class="call-recents-handler">
+                  <h3>11:14</h3>
+                  <img src="img/x-circle-fill.svg" alt="" />
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="call-contacts hidden">
+            <div class="call-contacts-head">
+              <h1>Contacts</h1>
+              <img src="img/plus-lg.svg" alt="" class="add-contact"/>
+            </div>
+
+            <div class="contact-search-box">
+              <div class="contact-search">
+                <img src="img/search.svg" alt="" />
+                <input type="text" placeholder="Search" id="contactInputSearch" />
+              </div>
+            </div>
+
+            <div class="contact-lists">
+              <!-- <div class="contact-list">
+                <img src="img/pic-11.jpg" alt="">
+                <h2>Teslim <span>0907823766286</span></h2>
+                <img src="img/trash3-fill.svg" alt="" class="contact-list-del">
+              </div>
+              <div class="contact-list">
+                <h2>Teslim <span>0907823766286</span></h2>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="contacts-form hidden">
+            <div class="contacts-form-head">
+              <div class="contacts-form-btn contacts-form-cancel">Cancel</div>
+              <div class="contact-form-headTypo">New Contact</div>
+              <div class="contacts-form-btn contacts-form-done">Done</div>
+            </div>
+
+            <div class="file-upload-wrapper">
+              <div class="user-pic">
+                <img src="img/person-circle.svg" alt="" id="fileImgDisplay" />
+              </div>
+              <label for="file-upload" class="custom-file-upload">
+                Add Photo
+              </label>
+              <input
+                id="file-upload"
+                class="file-upload-input"
+                type="file"
+                accept="image/*"
+              />
+              <span id="file-upload-filename"></span>
+            </div>
+            <form class="contacts-form-comp">
+              <input type="text" placeholder="firstname" id="firstname" />
+              <input type="text" placeholder="lastname" id="lastname" />
+              <input type="number" placeholder="phone number" id="phoneno" />
+            </form>
+          </div>
+
+          <div class="contacts-dial hidden">
+
+            <div class="contacts-dial-num"></div>
+            
+            <div class="contacts-keypad">
+              <button class="contacts-keypad-btn num-btn">1</button
+              ><button class="contacts-keypad-btn num-btn">2</button
+              ><button class="contacts-keypad-btn num-btn">3</button
+              ><button class="contacts-keypad-btn num-btn">4</button
+              ><button class="contacts-keypad-btn num-btn">5</button
+              ><button class="contacts-keypad-btn num-btn">6</button
+              ><button class="contacts-keypad-btn num-btn">7</button
+              ><button class="contacts-keypad-btn num-btn">8</button
+              ><button class="contacts-keypad-btn num-btn">9</button
+              ><button class="contacts-keypad-btn num-btn">*</button
+              ><button class="contacts-keypad-btn num-btn">0</button
+              ><button class="contacts-keypad-btn num-btn">#</button
+              ><button class="contacts-keypad-btn dial-keypad">
+                <img src="img/telephone-fill.svg" alt="" class="dial-keypad">
+              </button>
+              <button class="contacts-keypad-btn">
+                <img src="img/backspace-fill.svg" alt="" class="backspace">
+              </button>
+            </div>
+          </div>
+
+          <div class="contacts-balance hidden">
+            <div class="contacts-balance-info">
+            </div>
+            <button class="contacts-balance-dismiss">Dimiss</button>
+          </div>
+
+          <div class="contact-line hidden">
+            <div class="contact-line-back">Back</div>
+              <div class="contact-line-content">
+                <button class="sim sim1">SIM1 Airtel</button>
+                <button class="sim sim2">SIM2 MTN</button>
+              </div>
+          </div>
+
+          <div class="contact-calling hidden">
+            <!-- <div class="contact-calling-info">
+              <h1>Fahkuba</h1>
+              <h2>Calling mobile...</h2>
+            </div>
+
+            <div class="contact-calling-pic">
+              <img src="img/person-circle.svg" alt="">
+            </div>
+
+            <div class="contact-calling-quit">
+              <img src="img/telephone-fill.svg" alt="" class="quitCalling">
+            </div> -->
+          </div>
+
+          <div class="call-comp">
+            <img src="img/stopwatch-fill.svg" alt="" class="recentBtn"/>
+            <img src="img/person-circle.svg" alt="" class="contactBtn"/>
+            <div class="dial">
+              <img src="img/dial.png" alt="" class="dailBtn"/>
+            </div>
+          </div>
+
+          <div class="contact-err hidden">
+            
+          </div>
+        </div>
+
+        <div class="msg hidden">
+          <div class="msg-back">
+            Back
+          </div>
+          <div class="msg-home">
+            <div class="msg-home-heading">
+              <h2>Messages</h2>
+            </div>
+
+            <div class ="msg-search-box">
+              <div class="msg-search">
+                <img src="img/search.svg" alt="" />
+                <input type="text" placeholder="Search" id="msgInputSearch" />
+              </div>
+            </div>
+
+              <div class="msg-lists">
+                <div class="msg-list">
+                <img src="img/pic-11.jpg" alt="">
+                <h2>Teslim <span> wufg uy3wihf buo3j4i u23rio gtyu 23rio32rji</span></h2>
+                  
+                <div class="msg-list-bin">
+                    <img src="img/trash3-fill.svg" alt="" class="msg-list-del">
+                  </div>
+
+                  <div class="last-msg-sent-time">
+                    12:00
+                  </div>
+              </div>
+              <div class="msg-list">
+                <img src="img/pic-11.jpg" alt="">
+                <h2>Teslim <span> wufg uy3wihf buo3j</span></h2>
+                  
+                <div class="msg-list-bin">
+                    <img src="img/trash3-fill.svg" alt="" class="msg-list-del">
+                  </div>
+
+                  <div class="last-msg-sent-time">
+                    12:00
+                  </div>
+              </div>
+              </div>
+
+              <div class="new-msg-btn">
+                +
+              </div>
+          </div>
+
+          <div class="msg-dm hidden">
+            <div class="msg-dm-header">
+              <div class="msg-dm-back">
+                <img src="img/arrow-left-short.svg" alt="">
+              </div>
+
+              <div class="rcvr-img">
+                <img src="img/pic-11.jpg" alt="" class="rcvr-pic">
+              </div>
+              <h2 class="rcvr-name">Teslim</h2>
+
+              <div class="msg-dm-setting">
+                <img src="img/gear-fill.svg" alt="">
+              </div>
+
+              <div class="msg-dm-setting-cont  hidden">
+                <p class="del-all-dm">Delete All</p>
+                <p>Double on a text to delete it</p>
+              </div>
+            </div>
+
+            <div class="msg-all">
+              <div class="msg-all-content">
+                <div class="msg-dm-each">
+                  <div class="msg-dm-each-text">Hello kola</div>
+                  <div class="msg-dm-each-time">12:00</div>
+                  </div>
+    
+                  <div class="msg-dm-each">
+                    <div class="msg-dm-each-text">Hello kola, r248637ry3289ryh 28y3rgu 283iugrh y2iugrhb</div>
+                    <div class="msg-dm-each-time">12:00</div>
+                    </div>
+              </div>
+            </div>
+
+            <form class="dm-form">
+              <textarea name="" id="msgText" rows="1"></textarea>
+              <button type="submit" id="sendText">
+                <img src="img/send-fill.svg" alt="">
+              </button>
+            </form>
+          
+          </div>
+
+          <div class="msg-new hidden">
+            <div class="msg-new-header">
+              <div class="msg-new-back">
+                <img src="img/arrow-left-short.svg" alt="">
+              </div>
+
+              <h2 class="msg-new-header-text">New conversion</h2>
+            </div>
+
+            <div class="msg-opts">
+              <div class="msg-opts-search-box">
+                <div class="msg-opts-search">
+                  <h2>To: </h2>
+                  <input type="text" placeholder="Search" id="msgOptsInputSearch" />
+                </div>
+              </div>
+
+              <div class="msg-opts-lists">
+                <div class="msg-opts-list">
+                  <img src="img/pic-1.jpg" alt="" class='contact-list-img msg-opts-list-img'>
+                  <h2>Ayofe Faheez<span>080979685r6</span></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div class="camera hidden">
@@ -104,7 +377,7 @@
               <button id="captureBtn2"></button>
             </div>
             <div class="lastPic"></div>
-            <canvas id="canvas2" style="display:none;"></canvas>
+            <canvas id="canvas2" style="display: none"></canvas>
           </div>
         </div>
 
@@ -112,8 +385,7 @@
           <div class="gallery-back">back</div>
         </div>
 
-        <div class="gallery-view hidden">
-        </div>
+        <div class="gallery-view hidden"></div>
 
         <div class="ageCal hidden">
           <div class="ageCal-back">back</div>
@@ -136,16 +408,24 @@
             <form action="#" class="form">
               <div class="input">
                 <label for="" class="labelBox label__day">Day</label>
-                <input type="number" class="inputBox input__day" placeholder="DD" />
+                <input
+                  type="number"
+                  class="inputBox input__day"
+                  placeholder="DD"
+                />
                 <div class="hidden empty__text">This field is required</div>
               </div>
-      
+
               <div class="input">
                 <label for="" class="labelBox label__day">Month</label>
-                <input type="number" class="inputBox input__month" placeholder="MM" />
+                <input
+                  type="number"
+                  class="inputBox input__month"
+                  placeholder="MM"
+                />
                 <div class="hidden empty__text">This field is required</div>
               </div>
-      
+
               <div class="input">
                 <label for="" class="labelBox label__day">year</label>
                 <input
@@ -156,10 +436,14 @@
                 <div class="hidden empty__text">This field is required</div>
               </div>
             </form>
-      
+
             <div class="textCon">
-              <p class="text year"><span class="num year_num">- -</span> years</p>
-              <p class="text month"><span class="num month_num">- -</span> months</p>
+              <p class="text year">
+                <span class="num year_num">- -</span> years
+              </p>
+              <p class="text month">
+                <span class="num month_num">- -</span> months
+              </p>
               <p class="text day"><span class="num day_num">- -</span> days</p>
             </div>
           </div>
@@ -173,22 +457,26 @@
         <div class="music hidden">
           <div class="music-back">Back</div>
           <div class="music-degree hidden">
-            <input type="range" id="volume-control">
+            <input type="range" id="volume-control" />
             <span id="volume-percentage">50%</span>
-        </div>
+          </div>
 
-        <div class="music-playing">
-          <h2 class="music-playing-info">No music is played yet.</h2>
-        </div>
+          <div class="music-playing">
+            <h2 class="music-playing-info">No music is played yet.</h2>
+          </div>
 
-        <div class="allMusic">
-        </div>
-
+          <div class="allMusic"></div>
         </div>
       </div>
     </div>
 
-    <script defer src='https://meet.jit.si/external_api.js'></script>
+    <script>
+  //       function powerOff(e) {
+      
+  //   console.log('power off')
+  // }
+    </script>
+    <script defer src="https://meet.jit.si/external_api.js"></script>
     <script type="module" defer src="scripts/index.js"></script>
   </body>
 </html>

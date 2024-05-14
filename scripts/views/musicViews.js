@@ -1,3 +1,14 @@
+/**
+ * This code snippet initializes a music player with various functionalities.
+ * It imports necessary elements from the index.js file and defines variables for the music player components.
+ * The music player displays a list of songs with their corresponding images and names.
+ * Users can play or pause a song by clicking on the play or pause button.
+ * The volume can be controlled using the volume control slider or the increase/decrease volume buttons.
+ * The initial volume is set based on the current volume of the music song.
+ * The volume display is updated whenever the volume is changed.
+ * The music player can be shown or hidden by clicking on the music button.
+ * The music player can be closed and the main screen is displayed by clicking on the back button.
+ */
 import { allAppScreen, allApps } from "../index.js";
 const music = document.querySelector(".music");
 const musicBtn = document.querySelector(".musicBtn");
@@ -13,6 +24,7 @@ let currentlyPlayingMusic = null;
 let htmlData = "";
 let musicSong;
 let timer;
+
 let musicArr = [
   {
     name: "Soundgasm",
@@ -60,7 +72,7 @@ let musicArr = [
     name: "No Stress",
     artist: "Wizkid",
     imgurl: "../img/madeIL.jpg",
-    audiourl: "../audio/Rema-Charm-(TrendyBeatz.com).mp3",
+    audiourl: "../audio/Wizkid-No-Stress-(TrendyBeatz.com).mp3",
   },
 
   {
@@ -79,6 +91,12 @@ let musicArr = [
 ];
 
 function allMusicHtml() {
+  /**
+   * Generates HTML for displaying all music songs.
+   * This function iterates over the 'musicArr' array and generates HTML markup for each song. The generated HTML includes an image, song name, and play/pause buttons. The generated HTML is then inserted into the 'allMusic' element on the page.
+   * @returns {void}
+   */
+
   musicArr.forEach((el) => {
     htmlData += `<div class="song">
         <img src=${el.imgurl} alt="" class="song-img">
@@ -97,7 +115,7 @@ function allMusicHtml() {
       const audio = e.target.closest(".toggle-play");
       const songName = audio.previousElementSibling;
       musicPlayingInfo.textContent = `${songName.textContent} is playing now.`;
-      console.log(audio.dataset.music);
+      // console.log(audio.dataset.music);
 
       if (currentlyPlayingMusic) {
         const [oldAudio, previousTar, siblingsTar] = currentlyPlayingMusic;

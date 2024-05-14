@@ -1,3 +1,9 @@
+/**
+ * This code snippet exports several variables and functions related to a gallery feature.
+ * It includes functions for initializing the gallery, getting image type and size, rendering the gallery view page, and handling various event listeners.
+ * The code also includes an array for storing image data and a function for generating the HTML markup for the gallery.
+ * The gallery functionality allows users to view and interact with images, set images as wallpaper, delete images, and navigate between different views.
+ */
 import { allApps, allAppScreen, mobileBox } from "../index.js";
 import { galleryBackBtn, lastPic } from "./cameraViews.js";
 
@@ -41,8 +47,13 @@ export function galleryFunc() {
   });
 }
 
-//get image type and size
 export const getImgTypeAndSize = async function (img) {
+  /**
+   * This code exports several variables and functions related to a gallery feature.
+   * It includes functions for initializing the gallery, getting image type and size, rendering the gallery view page, and handling various event listeners.
+   * The code also includes an array for storing image data and a function for generating the HTML markup for the gallery.
+   * The gallery functionality allows users to view and interact with images, set images as wallpaper, delete images, and navigate between different views.
+   */
   const res = await fetch(img.src);
   const blob = await res.blob();
   const width = img.width;
@@ -52,10 +63,21 @@ export const getImgTypeAndSize = async function (img) {
   const formattedSizeInBytes = sizeInBytes.toLocaleString();
   const imgType = blob.type;
   renderPage(img.src, formattedSizeInBytes, imgType, width, height, index);
-  console.log(sizeInBytes, imgType);
 };
 
 function renderPage(src, size, type, width, height, index) {
+  /**
+   * Renders the gallery view page with the provided image data.
+   *
+   * @param {string} src - The source of the image.
+   * @param {string} size - The size of the image in bytes.
+   * @param {string} type - The type of the image.
+   * @param {number} width - The width of the image.
+   * @param {number} height - The height of the image.
+   * @param {number} index - The index of the image in the gallery.
+   * @returns {void}
+   */
+
   let settingClicked = false;
   const data = `
         <div class="gallery-view-back">
